@@ -1,7 +1,7 @@
 import { useRef } from "react";
 
 import Input from "./Input.jsx";
-import Modal from "./Modal.jsx"
+import Modal from "./Modal.jsx";
 
 /// w - width
 /// [x] - doesn’t includes in theme
@@ -11,7 +11,7 @@ import Modal from "./Modal.jsx"
 /// my - vertical margin (top & bottom)
 
 export default function NewProject({ onAdd }) {
-    const modal = useRef();
+  const modal = useRef();
 
   const title = useRef();
   const description = useRef();
@@ -40,11 +40,15 @@ export default function NewProject({ onAdd }) {
 
   return (
     <>
-    <Modal ref={modal} buttonCaption="Got it">
-        <h2>Invalid Input</h2>
-        <p>Oops ... looks like you forgot to enter a value.</p>
-        <p>Please make sure you provide a valid value for every input field.</p>
-    </Modal>
+      <Modal ref={modal} buttonCaption="Got it">
+        <h2 className="text-xl font-bold text-stone-700 my-4">Invalid Input</h2>
+        <p className="text-stone-600 mb-4">
+          Oops ... looks like you forgot to enter a value.
+        </p>
+        <p className="text-stone-600 mb-4">
+          Please make sure you provide a valid value for every input field.
+        </p>
+      </Modal>
       <div className="w-[35rem] mt-16">
         <menu className="flex items-center justify-end gap-4 my-4">
           <li>
